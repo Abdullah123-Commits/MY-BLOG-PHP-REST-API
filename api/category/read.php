@@ -27,7 +27,7 @@
             extract($row);
 
             $category_item = array(
-                'id' => $id,
+                'id' => $category_id,
                 'name' => $name,
             );
 

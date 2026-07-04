@@ -32,7 +32,7 @@
                 FROM
                 ' . $this->table . ' p
                 LEFT JOIN
-                    categories c ON p.category_id = c.id
+                    categories c ON p.category_id = c.category_id
                 ORDER BY 
                     p.created_at DESC';
 
@@ -59,7 +59,7 @@
                 FROM
                 ' . $this->table . ' p
                 LEFT JOIN
-                    categories c ON p.category_id = c.id
+                    categories c ON p.category_id = c.category_id
                 WHERE
                     p.id = ?
                 LIMIT 0,1';
@@ -117,7 +117,7 @@
 
     // Update Posts in db
     public function update() {
-        // Create Post in database
+        // update Post in database
         $query = 'UPDATE ' . $this->table . '
                 SET 
                     title = :title,
